@@ -37,6 +37,24 @@
 
         formalGreetings: function() {
             return formalGreetings[this.language] + ' ' + this.fullName();
+        },
+
+        greet: function(formal) {
+            var msg;
+
+            if(formal) {
+                msg = this.formalGreetings();
+            } else {
+                msg = this.greet();
+            }
+
+            if(console) {
+                console.log(msg);
+            }
+
+            // 'this' refers to the calling object at execution time
+            // makes the method chainable
+            return this;
         }
     };
 
