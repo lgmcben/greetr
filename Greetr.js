@@ -55,7 +55,15 @@
             // 'this' refers to the calling object at execution time
             // makes the method chainable
             return this;
-        }
+        },
+
+        log: function() {
+            if (console) {
+                console.log(logMessages[this.language] + ': ' + this.fullName());
+            }
+            return this;
+        },
+
     };
 
     Greetr.init = function(firstName, lastName, language){
