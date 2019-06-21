@@ -45,7 +45,7 @@
             if(formal) {
                 msg = this.formalGreetings();
             } else {
-                msg = this.greet();
+                msg = this.greeting();
             }
 
             if(console) {
