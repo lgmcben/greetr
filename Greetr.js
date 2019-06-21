@@ -64,6 +64,11 @@
             return this;
         },
 
+        setLang: function(newLang) {
+            this.language = newLang;
+            this.validate();
+            return this;
+        }
     };
 
     Greetr.init = function(firstName, lastName, language){
